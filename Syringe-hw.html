@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .syringe {
+      width: 600px;
+      height: 150px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .back {
+      width: 60px;
+      height: 100px;
+      border: 1px solid #c4c4c4;
+      background: linear-gradient(white, rgb(214, 214, 214), white);
+      position: absolute;
+      top: 17%;
+      left: -10.2%;
+    }
+
+    .back::before {
+      content: "";
+      width: 50px;
+      height: 135px;
+      border: 0.5px solid #c4c4c4;
+      background: linear-gradient(white, rgb(214, 214, 214), white);
+      position: absolute;
+      top: -17%;
+      left: -87%;
+      border-radius: 10%;
+    }
+
+    .inside {
+      width: 275px;
+      height: 150px;
+      border: 0.5px solid #c4c4c4;
+      background: linear-gradient(rgb(248, 248, 176)20%, rgb(233, 230, 208), rgb(248, 248, 176));
+      position: absolute;
+      top: 0;
+      right: 0%;
+    }
+
+    .inside::before {
+      content: "";
+      width: 275px;
+      height: 150px;
+      border: 0.5px solid #c4c4c4;
+      background: linear-gradient(white, rgb(214, 214, 214), white);
+      position: absolute;
+      top: 0;
+      left: -118.2%;
+    }
+
+    .inside::after {
+      content: "";
+      width: 50px;
+      height: 150px;
+      background: black;
+      position: absolute;
+      top: 0;
+      left: -18.5%;
+    }
+
+    .face {
+      width: 70px;
+      height: 100px;
+      border: 1px solid #c4c4c4;
+      background: linear-gradient(white, rgb(214, 214, 214), white);
+      position: absolute;
+      top: 17%;
+      right: -11%;
+      border-radius: 10%;
+      z-index: -1;
+    }
+
+    .face::before {
+      content: "";
+      width: 100px;
+      border: 1px solid #c4c4c4;
+      /* background: linear-gradient(white, rgb(214, 214, 214), white); */
+      background: black;
+      position: absolute;
+      right: -145%;
+      top: 50%;
+    }
+
+    /* 這裡是 GPT 寫的 */
+    .syringe input[type="password"] {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      border: none;
+    }
+
+    input::placeholder {
+      height: 200px;
+      text-align: bottom;
+      z-index: 1;
+      position: relative;
+      bottom: -10%;
+      font-family: 微軟正黑體;
+      color: rgb(156, 154, 154);
+    }
+
+    .line1 {
+      height: 20px;
+      width: 0;
+      border: 2px solid rgba(156, 154, 154, 0.774);
+      z-index: 1;
+      position: relative;
+      left: 50px;
+    }
+
+    .line1::before {
+      content: "";
+      width: 0;
+      border: 2px solid rgba(156, 154, 154, 0.774);
+      z-index: 1;
+      position: relative;
+      left: 75px;
+    }
+
+    .line1::after {
+      content: "";
+      width: 0;
+      border: 2px solid rgba(156, 154, 154, 0.774);
+      z-index: 1;
+      position: relative;
+      left: 150px;
+    }
+
+    .line2 {
+      height: 20px;
+      width: 0;
+      border: 2px solid rgba(156, 154, 154, 0.774);
+      z-index: 1;
+      position: relative;
+      left: 375px;
+      top: -23px;
+    }
+
+    .line2::before {
+      content: "";
+      width: 0;
+      border: 2px solid rgba(156, 154, 154, 0.774);
+      position: relative;
+      left: 75px;
+    }
+
+    .line2::after {
+      content: "";
+      width: 0;
+      border: 2px solid rgba(156, 154, 154, 0.774);
+      position: relative;
+      left: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <input type="password" placeholder="Made in Taiwan">
+    <div class="back"></div>
+    <div class="inside"></div>
+    <div class="face"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .bear {
+      width: 250px;
+      height: 250px;
+      background: black;
+      position: absolute;
+      border-radius: 50rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .bear::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      background: black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50rem;
+    }
+
+    .bear::before {
+      content: "";
+      width: 80px;
+      height: 80px;
+      background: black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50rem;
+    }
+
+    .face01::after {
+      content: " ";
+      width: 70px;
+      height: 70px;
+      background: white;
+      position: absolute;
+      top: 50%;
+      left: 195%;
+      border-radius: 50rem;
+      transform: translate(-50%, -50%);
+    }
+
+    .face01::before {
+      content: " ";
+      width: 50px;
+      height: 50px;
+      background: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50rem;
+      transform: translate(-50%, -50%);
+    }
+
+    .face01 {
+      width: 70px;
+      height: 70px;
+      background: white;
+      position: relative;
+      top: 35%;
+      left: 30%;
+      border-radius: 50rem;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .face02::after {
+      content: " ";
+      width: 60px;
+      height: 60px;
+      background: red;
+      position: absolute;
+      top: 50%;
+      left: 425%;
+      border-radius: 50rem;
+      transform: translate(-50%, -50%);
+    }
+
+    .face02::before {
+      content: " ";
+      width: 50px;
+      height: 50px;
+      background: black;
+      position: absolute;
+      top: -45%;
+      left: 325%;
+      border-radius: 50rem;
+      transform: translate(-50%, -50%);
+    }
+
+    .face02 {
+      width: 60px;
+      height: 60px;
+      background: red;
+      position: relative;
+      top: 30%;
+      left: 5%;
+      border-radius: 50rem;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .mouth {
+      width: 110px;
+      height: 70px;
+      background: white;
+      border-radius: 100px/60px;
+      position: absolute;
+      transform: translate(65%, -20%);
+    }
+
+    .mouth::before {
+      content: "";
+      width: 25px;
+      height: 15px;
+      background: black;
+      border-radius: 100px/60px;
+      position: absolute;
+      transform: translate(170%, 70%);
+      z-index: 1;
+    }
+
+    .mouth::after {
+      content: "";
+      width: 75px;
+      height: 25px;
+      background: black;
+      border-radius: 150px/50px;
+      position: absolute;
+      transform: translate(25%, 150%);
+    }
+
+    .ear {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      bottom: 50%;
+    }
+
+    .ear::before {
+      content: "";
+      width: 16%;
+      height: 16%;
+      position: absolute;
+      bottom: 50%;
+      background: white;
+      left: 78%;
+      bottom: 80%;
+      border-radius: 50rem;
+    }
+
+    .ear::after {
+      content: "";
+      width: 16%;
+      height: 16%;
+      position: absolute;
+      bottom: 50%;
+      background: white;
+      left: 6%;
+      bottom: 80%;
+      border-radius: 50rem;
+      z-index: 1;
+    }
+
+    .v {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+    }
+
+    .v::before {
+      content: "";
+      width: 16%;
+      height: 16%;
+      position: absolute;
+      bottom: 50%;
+      background: white;
+      left: 55%;
+      bottom: 58%;
+      transform: skew(-45deg);
+
+    }
+
+    .v::after {
+      content: "";
+      width: 15%;
+      height: 15%;
+      position: absolute;
+      bottom: 50%;
+      background: white;
+      left: 35%;
+      bottom: 58%;
+      transform: skew(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bear">
+    <div class="face01"></div>
+    <div class="face02"></div>
+    <div class="mouth"></div>
+    <div class="ear"></div>
+    <div class="v"></div>
+
+  </div>
+</body>
+
+</html>
